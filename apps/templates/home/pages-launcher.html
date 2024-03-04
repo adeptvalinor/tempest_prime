@@ -1,0 +1,152 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Server {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<style>
+  /* Basic styles for layout */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar {
+    background-color: #222;
+    overflow: hidden;
+  }
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .container {
+    padding: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #555;
+  }
+  .button {
+    background-color: #f00;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .attack-parameters {
+    background-color: #444;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .attack-parameters h3 {
+    margin-top: 0;
+  }
+  .attack-parameters input,
+  .attack-parameters select {
+    padding: 5px;
+    margin: 5px 0;
+    color: #333;
+  }
+  .attack-parameters label {
+    display: block;
+    margin: 5px 0 2px;
+  }
+  .start-attack-button {
+    background-color: #f00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+
+	<main class="content">
+		<div class="container-fluid p-0">
+
+			<h1 class="h3 mb-3">Servers</h1>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="server-list">
+                        <h2>Servers Attack, Total PPS: 0, Expected: 0 Bit/s</h2>
+                        <table>
+                            <th>
+                                <td>Name</td>
+                                <td>Last Seen</td>
+                                <td>Location</td>
+                                <td>Bandwidth</td>
+                            </th>
+                        </table>
+                        <!-- Server list would go here -->
+                    </div>
+                </div>
+            </div>
+
+			<div class="row">
+				<div class="col-6">
+                    <div class="attack-parameters">
+                        <h3>Attack Parameters</h3>
+                        <form>
+                            <label for="target">Target:</label>
+                            <input type="text" id="target" name="target">
+
+                            <label for="port">Port:</label>
+                            <input type="number" id="port" name="port" value="80">
+
+                            <label for="time">Time:</label>
+                            <input type="number" id="time" name="time" value="300">
+
+                            <label for="power">Power:</label>
+                            <input type="range" id="power" name="power">
+
+                            <label for="mode">Mode:</label>
+                            <select id="mode" name="mode">
+                                <option value="SYN">SYN</option>
+                                <option value="UDP">UDP</option>
+                                <option value="Abuse">Abuse</option>
+                            </select>
+                            <button type="submit" class="start-attack-button">Start Attack</button>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="col-6">
+                    <div class="ip-resolver">
+                        <h3>IP Resolver</h3>
+                        <!-- IP resolver form would go here -->
+                        <button class="button">Resolve</button>
+                    </div>
+                </div>
+			</div>
+
+		</div>
+	</main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

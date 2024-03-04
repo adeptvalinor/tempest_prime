@@ -1,0 +1,146 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Server {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<style>
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #555;
+    color: white;
+  }
+  .button {
+    background-color: #f00;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+
+	<main class="content">
+		<div class="container-fluid p-0">
+
+			<h1 class="h3 mb-3">Servers</h1>
+
+			<div class="row">
+				<div class="col-12">
+				  <div class="server-list">
+    <h2>Servers Attack, Total PPS: 0, Expected: 0 Bit/s</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>IP</th>
+        <th>Status</th>
+        <th>End time</th>
+        <th>Victim</th>
+        <th>Packets/s</th>
+        <th>Action</th>
+      </tr>
+      <!-- Repeat the following TR for each server in the list -->
+      <tr>
+        <td>TEST #1</td>
+        <td>***.***.***.***</td>
+        <td>DOWN</td>
+        <td>Not ready for attack</td>
+        <td>None</td>
+        <td>0</td>
+        <td><button class="button">STOP</button></td>
+      </tr>
+      <tr>
+        <td>TEST #2</td>
+        <td>140.102.87.191</td>
+        <td>Up</td>
+        <td>Not ready for attack</td>
+        <td>None</td>
+        <td>0</td>
+        <td><button class="button">STOP</button></td>
+      </tr>
+      <tr>
+        <td>TEST #3</td>
+        <td>***.***.***.***</td>
+        <td>DOWN</td>
+        <td>Not ready for attack</td>
+        <td>None</td>
+        <td>0</td>
+        <td><button class="button">STOP</button></td>
+      </tr>
+      <tr>
+        <td>TEST #1</td>
+        <td>***.***.***.***</td>
+        <td>DOWN</td>
+        <td>Not ready for attack</td>
+        <td>None</td>
+        <td>0</td>
+        <td><button class="button">STOP</button></td>
+      </tr>
+      <tr>
+        <td>TEST #2</td>
+        <td>140.102.87.191</td>
+        <td>Up</td>
+        <td>Not ready for attack</td>
+        <td>None</td>
+        <td>0</td>
+        <td><button class="button">STOP</button></td>
+      </tr>
+      <tr>
+        <td>TEST #1</td>
+        <td>***.***.***.***</td>
+        <td>DOWN</td>
+        <td>Not ready for attack</td>
+        <td>None</td>
+        <td>0</td>
+        <td><button class="button">STOP</button></td>
+      </tr>
+      <tr>
+        <td>TEST #2</td>
+        <td>140.102.87.191</td>
+        <td>Up</td>
+        <td>Not ready for attack</td>
+        <td>None</td>
+        <td>0</td>
+        <td><button class="button">STOP</button></td>
+      </tr>
+      <tr>
+        <td>TEST #1</td>
+        <td>***.***.***.***</td>
+        <td>DOWN</td>
+        <td>Not ready for attack</td>
+        <td>None</td>
+        <td>0</td>
+        <td><button class="button">STOP</button></td>
+      </tr>
+      <tr>
+        <td>TEST #2</td>
+        <td>140.102.87.191</td>
+        <td>Up</td>
+        <td>Not ready for attack</td>
+        <td>None</td>
+        <td>0</td>
+        <td><button class="button">STOP</button></td>
+      </tr>
+      <!-- ... other server rows ... -->
+    </table>
+  </div>
+                </div>
+			</div>
+
+		</div>
+	</main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
