@@ -1,52 +1,14 @@
-# [Django Dashboard](https://appseed.us/admin-dashboards/django) AdminKit
+Source: Built from # [Django Dashboard] AdminKit
 
-Open-Source **[Django Dashboard](https://appseed.us/admin-dashboards/django/)** crafted with basic modules, authentication, and database on top of a modern design. `AdminKit` is a professional dashboard that provides hundreds of UI components, forms, tables, charts, pages, and icons. The product is built on top of `Bootstrap 5`.
+Test Interface for remote server administration. Add servers via <url>/admin
 
-- 👉 [Django AdminKit](https://django-adminkit.appseed-srv1.com/) - LIVE deployment
-- 👉 More [Django Dashboards](https://appseed.us/admin-dashboards/django/) - provided by `AppSeed`
-
-<br />
-
-> Features
-
-- `Up-to-date dependencies`
-- [SCSS compilation](#recompile-css) via **Gulp**
-- UI-Ready app, `SQLite Database`, Django Native ORM
-- `Session-Based authentication`, Forms validation
-- `Deployment`: **Docker**, Gunicorn / Nginx, HEROKU
-- Support via **Github** (issues tracker) and [Discord](https://discord.gg/fZC6hup).
-
-<br />
-
-## ✨ Quick Start in `Docker`
+## ✨ Quick Start
 
 > Get the code
 
 ```bash
-$ git clone https://github.com/app-generator/django-adminkit.git
-$ cd django-adminkit
-```
-
-> Start the app in Docker
-
-```bash
-$ docker-compose up --build
-```
-
-Visit `http://localhost:85` in your browser. The app should be up & running.
-
-<br />
-
-![Boierplate Code Django Dashboard - Template project provided by AppSeed.](https://raw.githubusercontent.com/app-generator/django-adminkit/master/media/django-adminkit-screen.png)
-
-<br />
-
-## ✨ How to use it
-
-```bash
-$ # Get the code
-$ git clone https://github.com/app-generator/django-adminkit.git
-$ cd django-adminkit
+$ git clone https://github.com/adeptvalinor/tempest_prime.git
+$ cd tempest_prime
 $
 $ # Virtualenv modules installation (Unix based systems)
 $ virtualenv env
@@ -130,71 +92,3 @@ The project is coded using a simple and intuitive structure presented bellow:
    |-- ************************************************************************
 ```
 
-<br />
-
-> The bootstrap flow
-
-- Django bootstrapper `manage.py` uses `core/settings.py` as the main configuration file
-- `core/settings.py` loads the app magic from `.env` file
-- Redirect the guest users to Login page
-- Unlock the pages served by *app* node for authenticated users
-
-<br />
-
-## Deployment
-
-The app is provided with a basic configuration to be executed in [Docker](https://www.docker.com/), [Gunicorn](https://gunicorn.org/), and [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/).
-
-### [Gunicorn](https://gunicorn.org/)
----
-
-Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX.
-
-> Install using pip
-
-```bash
-$ pip install gunicorn
-```
-> Start the app using gunicorn binary
-
-```bash
-$ gunicorn --bind=0.0.0.0:8001 core.wsgi:application
-Serving on http://localhost:8001
-```
-
-Visit `http://localhost:8001` in your browser. The app should be up & running.
-
-
-<br />
-
-### [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/)
----
-
-Waitress (Gunicorn equivalent for Windows) is meant to be a production-quality pure-Python WSGI server with very acceptable performance. It has no dependencies except ones that live in the Python standard library.
-
-> Install using pip
-
-```bash
-$ pip install waitress
-```
-> Start the app using [waitress-serve](https://docs.pylonsproject.org/projects/waitress/en/stable/runner.html)
-
-```bash
-$ waitress-serve --port=8001 core.wsgi:application
-Serving on http://localhost:8001
-```
-
-Visit `http://localhost:8001` in your browser. The app should be up & running.
-
-<br />
-
-## Credits & Links
-
-- [Django](https://www.djangoproject.com/) - The official website
-- [Boilerplate Code](https://appseed.us/boilerplate-code) - Index provided by **AppSeed**
-- [Boilerplate Code](https://github.com/app-generator/boilerplate-code) - Index published on Github
-
-<br />
-
----
-[Django Dashboard](https://appseed.us/admin-dashboards/django) AdminKit - Provided by **AppSeed [App Generator](https://appseed.us/app-generator)**.
