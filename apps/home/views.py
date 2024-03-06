@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
+from .models import Server
 
 
 @login_required(login_url="/login/")
@@ -30,6 +31,9 @@ def pages(request):
         if load_template == 'admin':
             return HttpResponseRedirect(reverse('admin:index'))
         context['segment'] = load_template
+
+        if load_template == 'pages-server.html':
+            context['server_list'] = Server.objects.all()
 
         html_template = loader.get_template('home/' + load_template)
         return HttpResponse(html_template.render(context, request))

