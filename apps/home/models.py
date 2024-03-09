@@ -14,10 +14,21 @@ class Server(models.Model):
     ip = models.GenericIPAddressField()
     status = models.CharField(max_length=50)
     user = models.CharField(max_length=100)
+    #TODO: consider allowing passwords
     key = models.TextField()
     port = models.PositiveIntegerField()
     operating_system = models.CharField(max_length=100)
-    remarks = models.TextField()
+    remarks = models.TextField(blank=True)
     #TODO: Add Geo Loc (Lat / Long)
     date_added = models.DateTimeField(default=now)
     date_last_seen = models.DateTimeField(default=now)
+
+    def __str__(self):
+        return self.name
+
+#
+# class Application(models.model):
+  # assoc key with server
+  # name
+  # domain name?
+
